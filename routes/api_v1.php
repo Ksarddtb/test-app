@@ -16,9 +16,9 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::POST('registration',[AuthController::class,'registration']);
-Route::POST('login',[AuthController::class,'registration']);
+Route::POST('login',[AuthController::class,'login']);
 
 
-Route::middleware('auth:sanctum,api')->group(function () {
+Route::middleware('auth:sanctum')->group(function () {
     Route::GET('profile',[AuthController::class,'profile']);
 });
